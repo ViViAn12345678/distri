@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servicio-generador
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: generador
+  template:
+    metadata:
+      labels:
+        app: generador
+    spec:
+      containers:
+      - name: generador
+        image: servicio-generador
+        ports:
+        - containerPort: 80
