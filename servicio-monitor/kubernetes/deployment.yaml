@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: monitor
-        image: servicio-monitor
+        image: viviviri/monitor-service:latest
         ports:
         - containerPort: 80
